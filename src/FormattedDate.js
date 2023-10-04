@@ -3,7 +3,6 @@ import React from "react";
 export default function FormattedDate(props) {
     let daysWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    console.log(props.date);
     let currentDate = props.date.getDate();
     let month = months[props.date.getMonth()];
     let day = daysWeek[props.date.getDay()];
