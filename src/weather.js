@@ -4,8 +4,7 @@ import { useState } from 'react';
 import WeatherInfo from './WeatherInfo'
 import axios from 'axios';
 import "./weather.css";
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
+import Footer from './footer';
 
 export default function Weather(props) {
     const [weatherData, setweatherData] = useState({ready:false});
@@ -26,6 +25,7 @@ export default function Weather(props) {
             pressure: response.data.temperature.pressure,
             degree: response.data.wind.degree,
             icon: response.data.condition.icon_url,
+            iconAlt: response.data.condition.icon
 
         });
     }
@@ -58,6 +58,7 @@ export default function Weather(props) {
             </div>
         </div>
         <WeatherInfo  data={weatherData}/>
+        <Footer />
       {/*<div  className = "details mt-5 rounded-5 p-3 p-md-5" >
             <h2 className="mb-4 text-center text-md-left">5 Days Forecast:</h2>
             <div  className = "row d-flex justify-content-between align-items-center" >
