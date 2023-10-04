@@ -4,6 +4,7 @@ import { useState } from 'react';
 import WeatherInfo from './WeatherInfo'
 import axios from 'axios';
 import "./weather.css";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import Footer from './footer';
 
 export default function Weather(props) {

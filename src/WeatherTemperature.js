@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 export default function WeatherTemperature(props){
     const [unit, setUnit] = useState('celsius');
-    function showToFarenheit(event){
+    function showToFahrenheit(event){
         event.preventDefault();
-        setUnit("farenheit");
+        setUnit("fahrenheit");
     }
      function showToCelsius(event) {
         event.preventDefault();
@@ -15,24 +15,24 @@ export default function WeatherTemperature(props){
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
             <h2 className='text-center text-md-left'>{Math.round(props.celsius)}
             <br />
-              <span>°C</span> |<a href="/" onClick={showToFarenheit} className="text-decoration-none">°F</a> 
+              <span>°C</span> |<a href="/" onClick={showToFahrenheit} className="text-decoration-none">°F</a> 
             </h2>
             <h4 className="text-center">Feels like:
-            {Math.round(props. tempFeelsLike)}°C
+            {Math.round(props.tempFeelsLike)}°C
             </h4>
         </div>
     );
     }else{
-        let farenheit = (props.celsius * 9/5) + 32;
-        let tempFeelsLikeFarenheit = (props.tempFeelsLike * 9 / 5) + 32;
+        let fahrenheit = (props.celsius * 9/5) + 32;
+        let tempFeelsLikeFahrenheit = (props.tempFeelsLike * 9 / 5) + 32;
         return (
         <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
-            <h2 className = 'text-center text-md-left' > { Math.round(farenheit)}
+            <h2 className = 'text-center text-md-left' > { Math.round(fahrenheit)}
             <br />
                 <a href="/" onClick={showToCelsius} className="text-decoration-none">°C</a> |  <span>°F</span>
             </h2>
             <h4 className="text-center">Feels like:
-            {Math.round(tempFeelsLikeFarenheit)}°F
+            {Math.round(tempFeelsLikeFahrenheit)}°F
             </h4>
         </div>
         )
