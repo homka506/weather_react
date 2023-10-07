@@ -34,3 +34,26 @@ h4 {
 p{
   font-size: 1rem!important;
 }
+@media screen and (max-width:768px){
+  h1 {
+      font-weight: 800 !important;
+      font-size: 4rem !important;
+    }
+  
+    h2 {
+      font-weight: 800 !important;
+      font-size: 3rem !important;
+    }
+  
+    h3 {
+      font-size: 2rem !important;
+    }
+  
+    h4 {
+      font-size: 1rem !important;
+    }
+  
+    p {
+      font-size: 1rem !important;
+    }
+}

@@ -26,7 +26,7 @@ function handleResponse(response) {
           {forecast.map(function (dailyForecast, index) {
             if (index < 6) {
                 return (
-                    <div className="col-12 col-md-2 d-flex flex-column justify-content-between align-items-center" key={index}>
+                    <div className="col-6 col-md-2 d-flex flex-column justify-content-between align-items-center" key={index}>
                         <WeatherForecastDay data={dailyForecast}/>
                     </div>
                 );

@@ -50,7 +50,7 @@ export default function WeatherForecastDay(props){
                             </div>
                             <div className = "col-12 d-flex flex-column justify-content-between align-items-center">
                                   <span className = 'details_temp' > {temperature()}</span>
-                                   <p>
+                                   <p className = "text-nowrap" >
                                     <span className = 'details_temp_min me-3' > Max: {maxTemperature()}</span>
                                     <span className = 'details_temp_max'>Min: {minTemperature()}</span>
                                   </p>
