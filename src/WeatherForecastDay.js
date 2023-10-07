@@ -35,7 +35,7 @@ export default function WeatherForecastDay(props){
 
         }
     return (
-                        <div className = "row d-flex justify-content-between align-items-center">
+                        <div className = "row d-flex justify-content-between align-items-center  pb-5 pb-md-0">
                             <div  className = "col-12 d-flex flex-column justify-content-between align-items-center" >
                                   <h4 className="text-center">
                                       <span className='details_day'>{dayWeek()}</span> 
