@@ -14,7 +14,7 @@ return (
                 <div className = "col-12 col-md-6 offset-md-2 d-flex flex-column justify-content-center align-items-center rounded-5  p-3 p-md-5 main_details" >
                 <div className="row w-100">
                      <WeatherTemperature celsius = {props.data.temperature} tempFeelsLike ={props.data.tempFeelsLike} />
-                        <WeatherIcon code={props.data.iconAlt} description={props.data.description} />
+                    <WeatherIcon code={props.data.iconAlt} description={props.data.description}  size={150}/>
                 </div>
                 <div className="row w-100">
                                     <div className = 'col-6 col-md-3 d-flex flex-column justify-content-center align-items-center' >

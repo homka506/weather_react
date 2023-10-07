@@ -1,7 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import WeatherInfo from './WeatherInfo'
+import WeatherInfo from './WeatherInfo';
+import WeatherForecast from './WeatherForecast';
 import axios from 'axios';
 import "./weather.css";
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -16,6 +17,7 @@ export default function Weather(props) {
         console.log(response.data);
         setweatherData({
             ready:true,
+            coordinates: response.data.coordinates,
             date: new Date (response.data.time * 1000),
             temperature: response.data.temperature.current,
             tempFeelsLike: response.data.temperature.feels_like,
@@ -59,64 +61,9 @@ export default function Weather(props) {
             </div>
         </div>
         <WeatherInfo  data={weatherData}/>
+        <WeatherForecast   coordinates={weatherData.coordinates}/>
         <Footer />
-      {/*<div  className = "details mt-5 rounded-5 p-3 p-md-5" >
-            <h2 className="mb-4 text-center text-md-left">5 Days Forecast:</h2>
-            <div  className = "row d-flex justify-content-between align-items-center" >
-                <div  className = "col-6 col-md-2 d-flex flex-column justify-content-between align-items-center" >
-                    <h4>
-                        <span className='details_day'>Friday,</span> 
-                        <span className='details_date'>1</span> 
-                        <span className='details_month'>Sep</span>
-                    </h4>
-                    <span className = 'details_icon'>icon</span>
-                    <br />
-                    <span className = 'details_temp'>27°C</span>
-                </div>
-                <div className = "col-6 col-md-2 d-flex flex-column justify-content-between align-items-center" >
-                    <h4>
-                        <span className='details_day'>Friday,</span> 
-                        <span className='details_date'>1</span> 
-                        <span className='details_month'>Sep</span>
-                    </h4>
-                    <span className = 'details_icon'>icon</span>
-                    <br />
-                    <span className = 'details_temp'>27°C</span>
-                </div>
-                <div className = "col-6 col-md-2 d-flex flex-column justify-content-between align-items-center" >
-                    <h4>
-                        <span className='details_day'>Friday,</span> 
-                        <span className='details_date'>1</span> 
-                        <span className='details_month'>Sep</span>
-                    </h4>
-                    <span className = 'details_icon'>icon</span>
-                    <br />
-                    <span className = 'details_temp'>27°C</span>
-                </div>
-                <div className = "col-6 col-md-2 d-flex flex-column justify-content-between align-items-center" >
-                    <h4>
-                        <span className='details_day'>Friday,</span> 
-                        <span className='details_date'>1</span> 
-                        <span className='details_month'>Sep</span>
-                    </h4>
-                    <span className = 'details_icon'>icon</span>
-                    <br />
-                    <span className = 'details_temp'>27°C</span>
-                </div>
-                <div className = "col-12 col-md-2 d-flex flex-column justify-content-between align-items-center" >
-                    <h4>
-                        <span className='details_day'>Friday,</span> 
-                        <span className='details_date'>1</span> 
-                        <span className='details_month'>Sep</span>
-                    </h4>
-                    <span className = 'details_icon'>icon</span>
-                    <br />
-                    <span className = 'details_temp'>27°C</span>
-                </div>
 
-            </div>
-       </div>
-       */}
     </div>
 );
     }else{

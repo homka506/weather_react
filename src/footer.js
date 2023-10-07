@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Footer(){
     return (
-        <div className="text-center">
+        <div className="text-center mt-5">
               This project was coded by{" "}
         <a href = "https://regal-pastelito-c6e659.netlify.app/" target = "_blank" rel = "noopener noreferrer">
            Polina Kalashnikova
-          </a>
+          </a>{" "}
           
           and is{" "}
           <a
